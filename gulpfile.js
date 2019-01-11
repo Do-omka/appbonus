@@ -91,7 +91,7 @@ function img() {
 }
 
 function min_img() {
-	del(['docs/img'])
+	del(['docs/img/*'])
 	return gulp.src('src/img/*')
 		.pipe(imgmin())
 		.pipe(gulp.dest('docs/img'))
