@@ -1,0 +1,52 @@
+* {
+	all: unset;
+	box-sizing: border-box;
+	display: flex;
+	flex: none;
+	flex-direction: column;
+}
+
+*::before,
+*::after {
+	all: unset;
+	box-sizing: border-box;
+	flex: none;
+}
+
+head,
+script {
+	display: none;
+}
+
+html {
+	height: 100%;
+	font-size: 1px;
+}
+
+a[href],
+button,
+[type='button'] {
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+p,
+span {
+	display: inline-block;
+	hyphens: auto;
+}
+
+main {
+	flex-grow: 1;
+}
+
+.row {
+	flex-direction: row;
+}
+
+body {
+	height: 100%;
+	font-size: 16rem;
+	line-height: 1.25;
+}
