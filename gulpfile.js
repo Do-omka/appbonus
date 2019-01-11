@@ -41,7 +41,13 @@ function css() {
 		.pipe(postcss([
 			require('postcss-font-magician'),
 			require('postcss-inline-svg'),
-			require('postcss-svgo'),
+			require('postcss-svgo')({
+				plugins: [
+					{removeViewBox: false},
+					{cleanupIDs: true},
+					{removeDimensions: true}
+				]
+		}),
 			require('postcss-focus'),
 		],
 		{syntax: require('postcss-less')}
