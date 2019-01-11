@@ -9,7 +9,6 @@
 
 *::before,
 *::after {
-	all: unset;
 	box-sizing: border-box;
 	flex: none;
 }
@@ -42,10 +41,6 @@ main {
 	flex-grow: 1;
 }
 
-.row {
-	flex-direction: row;
-}
-
 body {
 	height: 100%;
 	font-size: 16rem;
@@ -66,6 +61,7 @@ body {
 	border-radius: 43px;
 	background-color: rgb(255, 255, 255);
 	background-image: linear-gradient(to top, rgb(247, 187, 0) 0%, rgb(247, 207, 0) 100%);
+	margin-bottom: 36rem;
 	
 	text-align: center;
 	font-family: 'SFUI Display';
@@ -74,8 +70,6 @@ body {
 	line-height: 50px;
 	text-transform: uppercase;
 	color: black;
-	
-	margin-bottom: 36rem;
 	
 	&:hover {
 		box-shadow+: 0 13px 21px rgba(255, 240, 0, 0.31);
@@ -102,12 +96,11 @@ header {
 		background-image: linear-gradient(-45deg, rgb(19, 14, 59) 0%, rgb(129, 2, 122) 100%);
 		
 		&::before {
-			display: b,block;
+			display: block;
 			content: '';
 			width: 362px;
 			height: 375px;
 			background-image: url(../img/boii.png);
-			
 			margin-top: -104rem;
 			margin-bottom: 54rem;
 		}
@@ -132,6 +125,7 @@ h2 {
 	padding: 130rem;
 	background-color: black;
 	position: relative;
+	
 	&::before {
 		display: block;
 		position: absolute;
@@ -167,6 +161,7 @@ h2 {
 				counter-increment: i;
 				content: counter(i);
 				
+				display: block;
 				width: 69px;
 				height: 69px;
 				background-color: rgb(234, 20, 60);
