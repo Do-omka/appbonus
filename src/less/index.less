@@ -92,6 +92,7 @@ header {
 	padding-left: 44px;
 	padding-right: 44px;
 }
+
 .top_screen {
 	padding-bottom: 130rem;
 	.block {
@@ -142,21 +143,41 @@ h2 {
 		background: svg-load('../img/arrow_downnext.svg');
 	}
 	
-	ol li {
-		font-family: 'SFUI Display - Semibold';
-		font-size: 31rem;
-		font-weight: 400;
-		margin-bottom: 67rem;
+	ol {
+		counter-reset: i;
 		
-		span {
-			margin-bottom: 30rem;
-		}
-		
-		p {
-			font-family: 'SFUI Display';
-			font-size: 22px;
+		li {
+			font-family: 'SFUI Display - Semibold';
+			font-size: 31rem;
 			font-weight: 400;
-			margin-bottom: 30rem;
+			margin-bottom: 67rem;
+			
+			span {
+				margin-bottom: 30rem;
+			}
+			
+			p {
+				font-family: 'SFUI Display';
+				font-size: 22px;
+				font-weight: 400;
+				margin-bottom: 30rem;
+			}
+			
+			&::before {
+				counter-increment: i;
+				content: counter(i);
+				
+				width: 69px;
+				height: 69px;
+				background-color: rgb(234, 20, 60);
+				border-radius: 50%;
+				justify-content: center;
+				text-align: center;
+				font-family: 'SFUI Display - Heavy';
+				font-size: 51px;
+				font-weight: 400;
+				margin-bottom: 28rem;
+			}
 		}
 	}
 }
