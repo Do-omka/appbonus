@@ -86,14 +86,20 @@ function min_js() {
 }
 
 function img() {
-	return gulp.src('src/img/*.!(svg)*', {since: gulp.lastRun(img)})
+	return gulp.src('src/img/*', {since: gulp.lastRun(img)})
 		.pipe(gulp.dest('dev/img'))
 }
 
 function min_img() {
 	del(['docs/img/*'])
 	return gulp.src('src/img/*')
-		.pipe(imgmin())
+		.pipe(imgmin(imgmin.svgo({
+			plugins: [
+				{removeViewBox: false},
+				{cleanupIDs: true},
+				{removeDimensions: true}
+			]
+	})))
 		.pipe(gulp.dest('docs/img'))
 }
 
