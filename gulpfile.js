@@ -27,7 +27,7 @@ function min_html() {
 		 	removeComments: true,
 			minifyCSS: true
 		}))
-		.pipe(gulp.dest('dev'))
+		.pipe(gulp.dest('docs'))
 }
 
 function css() {
