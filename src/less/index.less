@@ -4,6 +4,7 @@
 	display: flex;
 	flex: none;
 	flex-direction: column;
+	align-items: center;
 }
 
 *::before,
@@ -34,7 +35,7 @@ button,
 p,
 span {
 	display: inline-block;
-	hyphens: auto;
+	// hyphens: auto;
 }
 
 main {
@@ -53,10 +54,13 @@ body {
 	color: white;
 	max-width: 640px;
 	align-self: center;
+	text-align: center;
 }
 
 .btn {
-	padding: 24px;
+	padding: 24rem;
+	width: 468rem;
+	align-self: center;
 	justify-content: center;
 	box-shadow: 0 13px 21px rgba(255, 240, 0, 0.31);
 	border-radius: 43px;
@@ -71,6 +75,8 @@ body {
 	text-transform: uppercase;
 	color: black;
 	
+	margin-bottom: 36rem;
+	
 	&:hover {
 		box-shadow+: 0 13px 21px rgba(255, 240, 0, 0.31);
 		box-shadow+: inset 0 0 20px rgba(255, 255, 255, 0.5);
@@ -78,15 +84,79 @@ body {
 }
 
 header {
-	padding-top: 24px;
-	padding-bottom: 63px;
+	padding-top: 24rem;
+	padding-bottom: 64rem;
 }
 
-.top_screen {
+.container {
 	padding-left: 44px;
 	padding-right: 44px;
 }
+.top_screen {
+	padding-bottom: 130rem;
+	.block {
+		padding: 44rem;
+		border-radius: 40px;
+		background-color: rgb(5, 0, 208);
+		background-image: linear-gradient(-45deg, rgb(19, 14, 59) 0%, rgb(129, 2, 122) 100%);
+		
+		&::before {
+			display: b,block;
+			content: '';
+			width: 362px;
+			height: 375px;
+			background-image: url(../img/boii.png);
+			
+			margin-top: -104rem;
+			margin-bottom: 54rem;
+		}
+	}
+}
+
+b {
+	font-family: 'SFUI Display';
+	font-size: 45rem;
+	font-weight: 700;
+}
+
+h2 {
+	font-family: 'SFUI Display - Semibold';
+	font-size: 41rem;
+	font-weight: 400;
+	margin-bottom: 54rem;
+}
 
 .manual {
+	padding-top: 55rem;
+	padding: 130rem;
 	background-color: black;
+	position: relative;
+	&::before {
+		display: block;
+		position: absolute;
+		content: '';
+		width: 307px;
+		height: 57px;
+		top: -57px;
+		left: center;
+		background: svg-load('../img/arrow_downnext.svg');
+	}
+	
+	ol li {
+		font-family: 'SFUI Display - Semibold';
+		font-size: 31rem;
+		font-weight: 400;
+		margin-bottom: 67rem;
+		
+		span {
+			margin-bottom: 30rem;
+		}
+		
+		p {
+			font-family: 'SFUI Display';
+			font-size: 22px;
+			font-weight: 400;
+			margin-bottom: 30rem;
+		}
+	}
 }

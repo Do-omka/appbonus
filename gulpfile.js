@@ -86,7 +86,7 @@ function min_js() {
 }
 
 function img() {
-	return gulp.src('src/img/*', {since: gulp.lastRun(img)})
+	return gulp.src('src/img/*.!(svg)*', {since: gulp.lastRun(img)})
 		.pipe(gulp.dest('dev/img'))
 }
 
