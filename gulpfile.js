@@ -11,7 +11,8 @@ const
 	del = require('del'),
 	rigger = require('gulp-rigger'),
 	babel = require('gulp-babel'),
-	retina = require('gulp-img-retina')
+	retina = require('gulp-img-retina'),
+	font = require('gulp-fontmin');
 
 function html() {
 	return gulp.src('src/*.html')
@@ -103,9 +104,10 @@ function min_img() {
 		.pipe(gulp.dest('docs/img'))
 }
 
-function fonts() {
-	del(['docs/fonts'])
-	return gulp.src('src/fonts/*', {since: gulp.lastRun(fonts)})
+function min_fonts() {
+	del(['docs/fonts/*'])
+	return gulp.src('src/fonts/*.ttf', {since: gulp.lastRun(min_fonts)})
+		// .pipe(font())
 		.pipe(gulp.dest('docs/fonts'))
 }
 
@@ -131,4 +133,4 @@ function watch_img() {
 
 gulp.task('default', gulp.series(html, css, js, img, gulp.parallel(watch_html, watch_css, watch_js, watch_img)))
 
-gulp.task('build', gulp.series(min_html, min_css, min_js, min_img, fonts))
+gulp.task('build', gulp.series(min_html, min_css, min_js, min_img, min_fonts))
