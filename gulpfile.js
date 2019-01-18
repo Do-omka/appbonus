@@ -43,9 +43,9 @@ function css() {
 			require('postcss-inline-svg'),
 			require('postcss-svgo')({
 				plugins: [
-					{removeViewBox: false},
-					{cleanupIDs: true},
-					{removeDimensions: true}
+					// {removeViewBox: false},
+					// {cleanupIDs: true},
+					// {removeDimensions: true}
 				]
 		}),
 			require('postcss-focus'),
@@ -102,9 +102,9 @@ function min_img() {
 	return gulp.src('src/img/*')
 		.pipe(imgmin(imgmin.svgo({
 			plugins: [
-				{removeViewBox: false},
-				{cleanupIDs: true},
-				{removeDimensions: true}
+				// {removeViewBox: false},
+				// {cleanupIDs: true},
+				// {removeDimensions: true}
 			]
 	})))
 		.pipe(gulp.dest('docs/img'))

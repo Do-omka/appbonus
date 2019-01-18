@@ -85,6 +85,7 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	display: flex;
 	flex: none;
 }
 
@@ -158,6 +159,10 @@ body {
 }
 
 body > header {
+	min-height: 100vh;
+}
+
+.logo {
 	padding-top: 24rem;
 	padding-bottom: 64rem;
 	align-items: center;
@@ -176,7 +181,6 @@ body > header {
 }
 
 .top_screen {
-	min-height: 100vh;
 	padding-bottom: 130rem;
 	
 	.block {
@@ -247,8 +251,6 @@ h2 {
 			&::before {
 				counter-increment: i;
 				content: counter(i);
-				
-				display: block;
 				width: 69rem;
 				height: 69rem;
 				background-color: rgb(234, 20, 60);
@@ -268,9 +270,4 @@ h2 {
 img {
 	max-width: 100%;
 	align-self: center;
-}
-
-.logo {
-	 width: 286rem;
-	 height: 65rem;
 }
