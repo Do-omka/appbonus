@@ -112,7 +112,7 @@ function min_img() {
 
 function min_fonts() {
 	del(['docs/fonts/*'])
-	return gulp.src('src/fonts/*.ttf', {since: gulp.lastRun(min_fonts)})
+	return gulp.src('src/fonts/*', {since: gulp.lastRun(min_fonts)})
 		// .pipe(font())
 		.pipe(gulp.dest('docs/fonts'))
 }
