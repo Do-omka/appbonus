@@ -29,7 +29,7 @@
 	display: inline;
 	empty-cells: show;
 	float: none;
-	font: normal normal normal normal medium normal sans-serif;
+	font: inherit;
 	height: auto;
 	hyphens: none;
 	left: auto;
@@ -215,7 +215,6 @@ h2 {
 .manual {
 	align-items: center;
 	padding-top: 55rem;
-	padding-bottom: 130rem;
 	background-color: black;
 	position: relative;
 	
@@ -239,15 +238,12 @@ h2 {
 			font-size: 30rem;
 			font-weight: 400;
 			margin-bottom: 68rem;
-			
-			span {
-				margin-bottom: 30rem;
+
+			&:last-child p {
+				margin-bottom: 60rem;
 			}
 			
 			p {
-				font-family: 'SFUI Display';
-				font-size: 22rem;
-				font-weight: 400;
 				margin-bottom: 30rem;
 			}
 			
@@ -268,15 +264,40 @@ h2 {
 			}
 		}
 	}
+
+	.btn {
+		font-family: "SFUI Display - Heavy";
+		font-size: 51rem;
+		font-weight: 400;
+	}
+}
+
+figure {
+	img {
+		margin-bottom: 10rem;
+	}
+
+	&.icon {
+		img {
+			width: 102rem;
+			height: 102rem;
+		}
+	}
+	
+	figcaption {
+		font-family: 'SFUI Display';
+		font-size: 22rem;
+		font-weight: 400;
+		margin-bottom: 30rem;
+	}
 }
 
 img {
 	max-width: 100%;
-	align-self: center;
 }
 
 .logo img {
 	 width: 286rem;
 	 height: 65rem;
-	 // align-self: center;
+	 align-self: center;
 }
